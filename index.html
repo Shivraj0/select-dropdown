@@ -12,10 +12,33 @@
             margin: 0;
             border: none;
             box-shadow: none;
+            box-sizing: border-box;
         }
 
-        body {
-            position: relative;
+        .index-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: #484848;
+            padding: 32px;
+        }
+
+        .links-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links-container a {
+            font-size: 24px;
+            color: #0288d1;
+            padding-top: 16px;
+            text-align: center;
+            text-decoration: none;
         }
 
         #stickOnScroll {
@@ -35,152 +58,12 @@
     </style>
 </head>
 <body>
-    <div id="stickOnScroll">
-        <h1>This is select drop down feature. header stick is implemented on this element.</h1>
-        <label for="country">Select country</label>
-
-        <select id="country" onchange="renderData(this)"></select>
-
-        <table id="dataTable">
-            <thead>
-                <tr>
-                    <td>Name</td>
-                    <td>Country code</td>
-                    <td>Date</td>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div class="index-container">
+        <h1>Feature Links</h1>
+        <div class="links-container">
+            <a title="Scroll Stick Feature" href="/scroll-stick">Scroll Stick Feature</a>
+            <a title="Covid API Feature" href="/covid-api">Covid API</a>
+        </div>
     </div>
-
-    <!-- Added this dummy data for scroll stick feature.  -->
-
-        <h1>Lorem ipsum dolor sit amet consectetuer adipiscing 
-        elit</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa 
-        <strong>strong</strong>. Cum sociis natoque penatibus 
-        et magnis dis parturient montes, nascetur ridiculus 
-        mus. Donec quam felis, ultricies nec, pellentesque 
-        eu, pretium quis, sem. Nulla consequat massa quis 
-        enim. Donec pede justo, fringilla vel, aliquet nec, 
-        vulputate eget, arcu. In enim justo, rhoncus ut, 
-        imperdiet a, venenatis vitae, justo. Nullam dictum 
-        felis eu pede <a class="external ext" href="#">link</a> 
-        mollis pretium. Integer tincidunt. Cras dapibus. 
-        Vivamus elementum semper nisi. Aenean vulputate 
-        eleifend tellus. Aenean leo ligula, porttitor eu, 
-        consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
-        dapibus in, viverra quis, feugiat a, tellus. Phasellus 
-        viverra nulla ut metus varius laoreet. Quisque rutrum. 
-        Aenean imperdiet. Etiam ultricies nisi vel augue. 
-        Curabitur ullamcorper ultricies nisi.</p>
-        
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <h2>Dummy Data</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <ul>
-          <li>Lorem ipsum dolor sit amet consectetuer.</li>
-          <li>Aenean commodo ligula eget dolor.</li>
-          <li>Aenean massa cum sociis natoque penatibus.</li>
-        </ul>
-        
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-        elit. Aenean commodo ligula eget dolor. Aenean massa. 
-        Cum sociis natoque penatibus et magnis dis parturient 
-        montes, nascetur ridiculus mus. Donec quam felis, 
-        ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        
-        <script src="script.js"></script>
 </body>
 </html>

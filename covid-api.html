@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --charcoal: #484848;
+            --font24: 24px;
+            --fontBold: 700
+        }
+
+        h1 {
+            font-size: 36px;
+            color: var(--charcoal);
+            text-align: center;
+        }
+
+        .select-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .select-label {
+            font-size: var(--font24);
+            color: var(--charcoal);
+            font-weight: var(--fontBold);
+        }
+
+        .select-dropdown {
+            margin-left: 12px;
+        }
+
+        .table-wrapper {
+            overflow: scroll;
+            -webkit-scrollbar-width: none;
+            scrollbar-width: none;
+        }
+
+        thead, tbody {
+            padding: 16px;
+            background-color: #efefef;
+        }
+
+        tbody td {
+            font-size: 18px;
+        }
+
+        table {
+            margin-top: 32px;
+            padding: 16px;
+            width: 100%;
+        }
+
+        thead td {
+            font-size: var(--font24);
+            font-weight: var(--fontBold);
+        }
+
+        td {
+            margin-top: 12px;
+            padding: 16px;
+        }
+
+        @media only screen and (min-width: 800px) {
+            td {
+                width: 17%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Covid Api Feature.</h1>
+        <div class="select-wrapper">
+            <label class="select-label" for="country">Select country</label>
+
+            <select class="select-dropdown" id="country" onchange="renderData(this)">
+                <option value="south-africa">South Africa</option>
+                <option value="india">India</option>
+                <option value="japan">Japan</option>
+                <option value="russia">Russia</option>
+                <option value="canada">Canada</option>
+            </select>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Country code</td>
+                        <td>Cases</td>
+                        <td>Status</td>
+                        <td>Date</td>
+                        <td>Time</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="covid-api.js" defer></script>
+</body>
+</html>
