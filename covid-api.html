@@ -41,8 +41,12 @@
 
         .table-wrapper {
             overflow: scroll;
-            -webkit-scrollbar-width: none;
             scrollbar-width: none;
+        }
+
+        .table-wrapper::-webkit-scrollbar {
+            height: 0;
+            width: 0;
         }
 
         thead, tbody {
@@ -80,7 +84,7 @@
 </head>
 <body>
     <div>
-        <h1>Covid Api Feature.</h1>
+        <h1>Covid Api</h1>
         <div class="select-wrapper">
             <label class="select-label" for="country">Select country</label>
 
